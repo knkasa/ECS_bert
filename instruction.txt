@@ -1,0 +1,8 @@
+Running sagemaker notebook from ECS.
+1. You'll need to create 3 roles.
+ - For ExecutionRole, attach AmazonECSTaskExecutionRolePolicy(Fargate) AmazonEC2ContainerServiceforEC2Role(EC2)
+ - For TaskRole, attach sagemaker full access, s3...
+ - In deploy.py, you need to specify AmazonSageMaker-ExecutionRole (role created in sagemaker domain).
+2. Upload scripts to github and setup codePipeline to upload image to ECR. (choose "Full clone" for Output Artifact format)
+3. Setup ECS task. Note awslogs-group Value will be the name of the cloudwatch log name.
+4. Create ECS cluster.  Run the task.
