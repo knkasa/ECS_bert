@@ -1,2 +1,2 @@
 # ECS sagemaker example
-Finetuning Bert model using ECS with sagemaker.
+Fine-tuning Bert model using ECS with sagemaker.
